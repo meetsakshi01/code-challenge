@@ -21,6 +21,16 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def destroy
+    @company = Company.find(params[:id])
+    del_company = @company.name
+    if @company.destroy
+      redirect_to companies_path, notice: "#{del_company} DELETED!"
+    else 
+      render :show
+    end
+  end
+
   def edit
   end
 

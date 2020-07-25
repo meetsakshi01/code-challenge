@@ -6,12 +6,17 @@
     </div>
     <div class="col text-right">
       <%= link_to "Edit", edit_company_path %>
+      <%= link_to "Delete", @company, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
   <div class="bg-success">
     <div class="container p-5 text-white">
       <h1><%= @company.name %></h1>
-      <h3>City, State</h3>
+      <h3><% if ZipCodes.identify(@company.zip_code).present? %>
+        <%=ZipCodes.identify(@company.zip_code)[:city] %>, <%= ZipCodes.identify(@company.zip_code)[:state_code] %>
+        <%else%>
+         City, State
+         <%end %> </h3>
       <pre>☝️ This is what needs to be udpated. Examples: Atlanta, GA or Nashvile, TN</pre>
     </div>
   </div>

@@ -33,3 +33,15 @@ brown_painting:
   email: "brown_painting@brown_painting.com"
   zip_code:
   phone: "555-808-8888"
+
+perk_painting:
+  name: "Perk Painting"
+  email: perk@getmainstreet.com
+  zip_code: "31008"
+  phone: "999-090-7898"
+
+central_designs:
+  name: "Central Designs n Decor"
+  email: 
+  zip_code: "31008"
+  phone: "999-090-7892"
